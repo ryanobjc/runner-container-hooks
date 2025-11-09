@@ -49,6 +49,7 @@ async function run(): Promise<void> {
     }
   } catch (error) {
     core.error(error as Error)
+    console.log(`Failure at top level: ${JSON.stringify(error)}`)
     process.exit(1)
   }
 }
